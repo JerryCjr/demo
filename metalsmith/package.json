@@ -1,0 +1,12 @@
+{
+  "name": "metalsmith",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "consolidate": "^0.15.1",
+    "handlebars": "^4.7.6",
+    "metalsmith": "^2.3.0",
+    "metalsmith-layouts": "^2.3.1"
+  }
+}
