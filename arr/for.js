@@ -47,7 +47,7 @@ function for_01(_array) {
 // console.log(for_01(array6));
 // * 双层for循环+splice
 // ! {} 无效
-// ! 无法过滤两个相同的 NAN 类型
+// ! 无法过滤两个相同的 NAN 类型 （两个NaN不相等）
 
 /**
  * @function 一层for循环+indexOf
@@ -75,3 +75,4 @@ function for_02(_array) {
 // * 一层for循环+indexOf
 // ! {} 无效
 // ! 无法识别 NAN类型 array6 有两个NAN 但是返回的数组两个都没了
+// * array.indexOf(NaN)都是-1 所以不返回NaN
