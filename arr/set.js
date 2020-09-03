@@ -54,6 +54,6 @@ console.log(unique_set_01(array6));
 // console.log(unique_set_02(array5));
 // console.log(unique_set_02(array6));
 
-// ! ES6 Set去重
+// * ES6 Set去重
 // ! 代码量最少， 但是无法去除{}空对象 也无法去除掉有相同键值的对象
 // ! 对 null undefined NaN 是有效的
