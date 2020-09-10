@@ -1,0 +1,24 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.11.2",
+    "@babyfs/babyfs-wechat": "^0.0.1-beta.0.1",
+    "@babyfs/babyfs-wechat-jssdk": "^0.0.2-beta.0.4",
+    "axios": "^0.20.0",
+    "babyfs-wechat-jssdk": "^0.1.4"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "start": "parcel dist src/* -p 80 --host m.lpt.babyfs.cn",
+    "build-prod": "parcel dist src/index.html"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "parcel-bundler": "^1.12.4"
+  }
+}
