@@ -6,10 +6,12 @@
 
 // * 稳定排序有哪些
 
+// 冒泡排序
+// 选择排序
+
 // 插入排序
 // 基数排序
 // 归并排序
-// 冒泡排序
 // 技术排序
 
 // * 非稳定排序
@@ -100,4 +102,38 @@ function bubbleSort(arr: number[]): number[] {
 }
 
 // bubbleSort([1, 2, 3, 4, 5]);
-bubbleSort([1, 21, 32, 4, 2, 0, 0, 9]);
+// bubbleSort([1, 21, 32, 4, 2, 0, 0, 9]);
+
+/**
+ * @function 选择排序
+ * @description 以由大到小的顺序进行排序
+ */
+function selectSort(arr: number[]): number[] {
+  // for (let i = 0; i < arr.length - 1; i++) {
+  //   for (let j = i + 1; j < arr.length; j++) {
+  //     if (arr[i] < arr[j]) {
+  //       const temp = arr[i];
+  //       arr[i] = arr[j];
+  //       arr[j] = temp;
+  //     }
+  //   }
+  // }
+
+  let i = 0;
+
+  while (i < arr.length - 1) {
+    for (let j = i + 1; j < arr.length; j++) {
+      const temp = arr[i];
+      if (arr[i] < arr[j]) {
+        arr[i] = arr[j];
+        arr[j] = temp;
+      }
+    }
+    i++;
+  }
+
+  console.log(arr);
+  return arr;
+}
+
+selectSort([1, 21, 32, 4, 2, 0, 0, 9]);
