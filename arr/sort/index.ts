@@ -119,21 +119,136 @@ function selectSort(arr: number[]): number[] {
   //   }
   // }
 
-  let i = 0;
+  // let i = 0;
 
-  while (i < arr.length - 1) {
-    for (let j = i + 1; j < arr.length; j++) {
-      const temp = arr[i];
-      if (arr[i] < arr[j]) {
-        arr[i] = arr[j];
-        arr[j] = temp;
-      }
-    }
-    i++;
-  }
+  // while (i < arr.length - 1) {
+  //   for (let j = i + 1; j < arr.length; j++) {
+  //     const temp = arr[i];
+  //     if (arr[i] < arr[j]) {
+  //       arr[i] = arr[j];
+  //       arr[j] = temp;
+  //     }
+  //   }
+  //   i++;
+  // }
 
   console.log(arr);
   return arr;
 }
 
-selectSort([1, 21, 32, 4, 2, 0, 0, 9]);
+// selectSort([1, 21, 32, 4, 2, 0, 0, 9]);
+
+/**
+ * @function 插入排序
+ * @description 类似玩扑克牌
+ * @param {number[]} arr
+ * @returns {number[]} 返回有小到大排序的数组
+ */
+function insertionSort(arr: number[]): number[] {
+  // // 思路大概是： 先找一个临时数组， 存原始数组的第一个值
+  // // 循环原始数组的剩余值 正序
+  // // 嵌套循环为当前临时数组 倒序
+  // // 像整理手里的扑克牌一样，
+  // // 因为是倒序比较，情况一：  如果比临时数组的最后一个数（下标length-1）还大，就直接排到最后一位，
+  // // 因为是倒序比较，情况二：  如果比临时数组的第一个数 (下标0) 还小，就直接排到第一位
+  // // 因为是倒序比较，情况三：  如果不属于上述两种情况，就依次比较 找到合适的位置插入 （比如比5小 但是比3大 就插入到3和5之间）
+
+  // const returnArr = [arr[0]];
+
+  // for (let i = 1; i < arr.length; i++) {
+  //   let flag = false;
+  //   for (let j = returnArr.length - 1; j >= 0; j--) {
+  //     if (arr[i] >= returnArr[j]) {
+  //       if (flag) {
+  //         // 情况三 这时候找到了较小的那个数 即举例中的3， 插入到3后面
+  //         returnArr.splice(j + 1, 0, arr[i]);
+  //       } else {
+  //         // 情况一
+  //         returnArr.push(arr[i]);
+  //       }
+  //       break;
+  //     } else {
+  //       // 情况二
+  //       if (j === 0) {
+  //         returnArr.unshift(arr[i]);
+  //       } else {
+  //         // 标志位表示属于 情况三
+  //         flag = true;
+  //       }
+  //     }
+  //   }
+  // }
+
+  // console.log(returnArr);
+  // return returnArr;
+
+  // // 如果不用中间量承接呢？
+  // // !不建议用这个方法， 有点繁琐， 相比后面那个显得很鸡肋
+  // // 倒序数组部分：首次只有一个值
+  // // 正序数组部分：从下标1开始
+  // // 情况一： _该正序数组元素_ 大于 倒序数组的最后一个元素（ length -1 ）， break
+  // // 情况二： _该正序数组元素_ 小于 倒序数组的第一个元素（ 0 ）原始数组在下标为0的地方新增一个元素（_该正序数组元素_），随后把_该正序数组元素_从当前位置移除
+  // // 情况三： _该正序数组元素_ 小于 倒序数组的最后一个元素（ length -1 ）, 但是大于 倒序数组的第一个元素，找到合适的位置并插入， 还需要把正序数组位置的元素移除
+
+  // for (let i = 1; i < arr.length; i++) {
+  //   let flag = false;
+  //   for (let j = i - 1; j >= 0; j--) {
+  //     if (arr[i] < arr[j]) {
+  //       if (j === 0) {
+  //         arr.splice(j, 0, arr[i]);
+  //         arr.splice(i + 1, 1);
+  //         break;
+  //       } else {
+  //         flag = true;
+  //       }
+  //     } else {
+  //       if (!flag) {
+  //         break;
+  //       }
+  //       arr.splice(j + 1, 0, arr[i]);
+  //       arr.splice(i + 1, 1);
+  //       break;
+  //     }
+  //   }
+  // }
+
+  // // * 下面的解法和思路更切合一点
+  // // 倒序数组部分：首次只有一个值
+  // // 正序数组部分：从下标1开始
+  // // * 情况一：
+  // // _该正序数组元素_ 大于等于 倒序数组的最后一个元素（ 下标 length -1 ）
+  // // 操作：break
+  // // * 情况二：
+  // // _该正序数组元素_ 小于等于 倒序数组的第一个元素（ 下标 0 ）
+  // // 操作：原始数组在（ 下标为0 ）的地方新增一个元素（ _该正序数组元素_ ），随后把该元素（ _该正序数组元素_ ）从当前位置移除
+  // // * 情况三：
+  // // _该正序数组元素_ 大于第一个元素 小于最后一个元素
+  // // 操作：排除了上面的情况以后，倒序循环的情况下， 只要 _该正序数组元素_ 大于等于 某个 _倒序数组元素_, 即可插入到 _倒序数组元素_ 之前，并删除 _该正序数组元素_
+
+  // for (let i = 1; i < arr.length; i++) {
+  //   for (let j = i - 1; j >= 0; j--) {
+  //     if (j === 0 && arr[i] <= arr[j]) {
+  //       arr.splice(0, 0, arr[i]);
+  //       arr.splice(i + 1, 1);
+  //       break;
+  //     }
+
+  //     if (j === i - 1 && arr[i] >= arr[j]) {
+  //       break;
+  //     }
+
+  //     if (arr[i] >= arr[j]) {
+  //       arr.splice(j + 1, 0, arr[i]);
+  //       arr.splice(i + 1, 1);
+  //       break;
+  //     }
+  //   }
+  // }
+
+  // ?据说能改进为二分法
+
+  console.log(arr);
+  return arr;
+}
+
+// insertionSort([1, 21, 32, 4, 2, 0, 0, 9]);
