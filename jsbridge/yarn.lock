@@ -848,7 +848,7 @@
     core-js "^2.6.5"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.11.0", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.10.3", "@babel/runtime@^7.11.0", "@babel/runtime@^7.8.4":
   version "7.11.2"
   resolved "http://npm.babyfs.cn/@babel%2fruntime/-/runtime-7.11.2.tgz#f549c13c754cc40b87644b9fa9f09a6a95fe0736"
   integrity sha512-TeWkU52so0mPtDcaCTxNBI/IHiz0pZgr8VEFqXFtZWpYD08ZB6FaSwVAS8MKRQAP3bYKiVjwysOJgMFY28o6Tw==
@@ -887,6 +887,43 @@
     "@babel/helper-validator-identifier" "^7.10.4"
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
+
+"@babyfs/babyfs-env@^1.0.8":
+  version "1.0.8"
+  resolved "http://npm.babyfs.cn/@babyfs%2fbabyfs-env/-/babyfs-env-1.0.8.tgz#c6de22a84a071dd0c904aa12a687b5b43ae72b6d"
+  integrity sha512-vRbfgk/Z3HBxb0wJT8wurDu5ibTOBKGp4Joh1di57LGRmCOhnz9bPhu4QZfa6cMwyO6cgo1S3uWfVS8MpkPQLg==
+  dependencies:
+    "@babel/runtime" "^7.10.3"
+
+"@babyfs/babyfs-env@^1.0.9":
+  version "1.0.9"
+  resolved "http://npm.babyfs.cn/@babyfs%2fbabyfs-env/-/babyfs-env-1.0.9.tgz#a787ef7205d9ee404b05ef4cf262b19309b8871c"
+  integrity sha512-tEuNV5ooXsl+f0C/+e5syFSsdKUGjZyDJHRwOcRalZTqUvb9vAflZUHh6ZXp0HzqHZsNt5kYlyt9iBAd44y+nQ==
+  dependencies:
+    "@babel/runtime" "^7.10.3"
+
+"@babyfs/babyfs-url@^1.0.3":
+  version "1.0.3"
+  resolved "http://npm.babyfs.cn/@babyfs%2fbabyfs-url/-/babyfs-url-1.0.3.tgz#fdcc417789ea5ca952be8caab4a8b2d540c21872"
+  integrity sha512-BQytfv5njLe26cVeKP8gmJ/5tXcimY81JNevR0EE46uK/YO83iJXAsMPlY4AeJYUj2wGNcsHk6o29OnGb3zTRA==
+  dependencies:
+    "@babel/runtime" "^7.10.3"
+
+"@babyfs/babyfs-wechat-jssdk@^0.1.0-beta.0.2":
+  version "0.1.0"
+  resolved "http://npm.babyfs.cn/@babyfs%2fbabyfs-wechat-jssdk/-/babyfs-wechat-jssdk-0.1.0.tgz#679a5eb78d0e2dc43cc2c275df78e1d3dc361453"
+  integrity sha512-bYp9CvKWZBm+4fK6K97Bp2ctfp7hCD8IKxzm4kV095ooO0WExWdsnr9d+reKZ1/6AbSE0vB+A7Z00JUEP5vAJw==
+
+"@babyfs/babyfs-wechat@^0.0.2":
+  version "0.0.2"
+  resolved "http://npm.babyfs.cn/@babyfs%2fbabyfs-wechat/-/babyfs-wechat-0.0.2.tgz#8a89cf6c45f028cd73df459b962339fd52889bee"
+  integrity sha512-mtjUOM4VyB0c8ERsFWQdAyankbQKYPfMgFhr5xGN0pJuK8YAGbuzvwimA6PXv0RWtGSwqVqLq955mD5oxJefWQ==
+  dependencies:
+    "@babel/runtime" "^7.10.3"
+    "@babyfs/babyfs-env" "^1.0.8"
+    "@babyfs/babyfs-url" "^1.0.3"
+    "@babyfs/babyfs-wechat-jssdk" "^0.1.0-beta.0.2"
+    axios "^0.20.0"
 
 "@cypress/listr-verbose-renderer@0.4.1":
   version "0.4.1"
@@ -2131,6 +2168,13 @@ aws4@^1.8.0:
   resolved "http://npm.babyfs.cn/aws4/-/aws4-1.10.1.tgz#e1e82e4f3e999e2cfd61b161280d16a111f86428"
   integrity sha512-zg7Hz2k5lI8kb7U32998pRRFin7zJlkfezGJjUc2heaD4Pw2wObakCDVzkKztTm/Ln7eiVvYsjqak0Ed4LkMDA==
 
+axios@^0.20.0:
+  version "0.20.0"
+  resolved "http://npm.babyfs.cn/axios/-/axios-0.20.0.tgz#057ba30f04884694993a8cd07fa394cff11c50bd"
+  integrity sha512-ANA4rr2BDcmmAQLOKft2fufrtuvlqR+cXNNinUmvfeSNCOF98PZL+7M/v1zIdGo7OLjEA9J2gXJL+j4zGsl0bA==
+  dependencies:
+    follow-redirects "^1.10.0"
+
 babel-code-frame@^6.22.0:
   version "6.26.0"
   resolved "http://npm.babyfs.cn/babel-code-frame/-/babel-code-frame-6.26.0.tgz#63fd43f7dc1e3bb7ce35947db8fe369a3f58c74b"
@@ -2175,35 +2219,12 @@ babel-runtime@^6.26.0:
     core-js "^2.4.0"
     regenerator-runtime "^0.11.0"
 
-babyfs-env@^1.1.4:
-  version "1.1.4"
-  resolved "http://npm.babyfs.cn/babyfs-env/-/babyfs-env-1.1.4.tgz#323c24587cd05150c82b627f5a600bd5a6dc4613"
-  integrity sha512-Q0mDOoGrKDWK8ePxBpMedulR9xFQq2xNPozQU1/ijR3cCe+Bub00s8/QivJA2hzdonIVerZP5YgpX09xRxOsJg==
-  dependencies:
-    babel-polyfill "^6.23.0"
-    babyfs-url "^0.1.4"
-
 babyfs-jsbridge@^0.1.1:
   version "0.1.1"
   resolved "http://npm.babyfs.cn/babyfs-jsbridge/-/babyfs-jsbridge-0.1.1.tgz#ef4c48b8fbea435ea2a28f161036b41afa63ec3c"
   integrity sha512-gz71bPdRegzXYisn1KDtthaCg/+OJJAp7CjMQJch6DCpRRnkKAB8bTiRNhpoa+T2z6cZD3KIjicAyTjn0PJQyA==
   dependencies:
     babel-polyfill "^6.23.0"
-
-babyfs-type@^0.1.4:
-  version "0.1.6"
-  resolved "http://npm.babyfs.cn/babyfs-type/-/babyfs-type-0.1.6.tgz#0317e1ecc50ded59f944173f64755261a46bcc21"
-  integrity sha512-ZVAQMfVd9grfVESc8sZIKU8iyEoUIb+IZWwJAYGZoExS0aZll81T8tC3bLg3raOf6Ly2xahmuTvKpwzO2AyWDw==
-  dependencies:
-    babel-polyfill "^6.23.0"
-
-babyfs-url@^0.1.4:
-  version "0.1.7"
-  resolved "http://npm.babyfs.cn/babyfs-url/-/babyfs-url-0.1.7.tgz#674acbda056038e6cec3ac5f593ffe3ce4359e78"
-  integrity sha512-YBUPlkAGK/loz3g0PvRfvH9dmnbGVu78rJMhgkcxAwvma80CZBhE0+uAiuv+P9GWlEHiTo4FwiKNP8oswitodA==
-  dependencies:
-    babel-polyfill "^6.23.0"
-    babyfs-type "^0.1.4"
 
 balanced-match@^1.0.0:
   version "1.0.0"
@@ -4599,7 +4620,7 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
-follow-redirects@^1.0.0:
+follow-redirects@^1.0.0, follow-redirects@^1.10.0:
   version "1.13.0"
   resolved "http://npm.babyfs.cn/follow-redirects/-/follow-redirects-1.13.0.tgz#b42e8d93a2a7eea5ed88633676d6597bc8e384db"
   integrity sha512-aq6gF1BEKje4a9i9+5jimNFIpq4Q1WiwBToeRK5NvZBd/TRsmW8BsJfOEGkr76TbOyPVD3OVDN910EcUNtRYEA==
@@ -9625,6 +9646,11 @@ vary@~1.1.2:
   version "1.1.2"
   resolved "http://npm.babyfs.cn/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
+
+vconsole@^3.3.4:
+  version "3.3.4"
+  resolved "http://npm.babyfs.cn/vconsole/-/vconsole-3.3.4.tgz#a7dacd8887b3d3e902e8d18425cda56c34e77f51"
+  integrity sha512-9yihsic96NPoMLQx/lCQwH9d89H0bbMW3LZPzo/t4yGQcS1X+vTCe9OHm1XSH7WNxzGDmcSwBiKLsFGwvJpQBg==
 
 vendors@^1.0.0:
   version "1.0.4"

@@ -10,9 +10,12 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "babyfs-env": "^1.1.4",
+    "@babyfs/babyfs-env": "^1.0.9",
+    "@babyfs/babyfs-wechat": "^0.0.2",
+    "axios": "^0.20.0",
     "babyfs-jsbridge": "^0.1.1",
     "core-js": "^3.6.5",
+    "vconsole": "^3.3.4",
     "vue": "^3.0.0-0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"

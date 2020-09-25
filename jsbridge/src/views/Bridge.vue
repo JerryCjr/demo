@@ -18,7 +18,7 @@
 
 <script>
 import bridge from 'babyfs-jsbridge';
-import env from 'babyfs-env';
+import env from '@babyfs/babyfs-env';
 import { ref, defineComponent } from 'vue';
 export default defineComponent({
   name: 'Bridge',

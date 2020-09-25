@@ -1,6 +1,6 @@
 module.exports = {
   devServer: {
-    host: 'localhost',
-    port: 8080, // 端口
+    host: 'm.lpt.babyfs.cn',
+    port: 80, // 端口
   },
 };
